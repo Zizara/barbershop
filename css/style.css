@@ -501,7 +501,7 @@ line-height: 42px;
 /*всплывающая форма*/
 .modal-content {
   position: fixed;
-  /*display: none;*/
+  display: none;
   top: 120px;
   left: 50%;
   margin-left: -230px;
@@ -511,6 +511,10 @@ line-height: 42px;
   background: #f9f5f3 url("../img/index-content_bg.jpg");
   box-shadow: 0 30px 50px rgba (0,0,0, 0.7);
 }
+.modal-content-show {
+  display: block;
+}
+
 .modal-content-close {
   position: absolute;
   top:0;
@@ -523,6 +527,7 @@ line-height: 42px;
   outline: 0;
   cursor: pointer;
 }
+
 .modal-content-close::after,
 .modal-content-close::before {
   position: absolute;
