@@ -112,9 +112,9 @@
   <!-- 2 -->
   <div class="catalog-items">
     <div class="slider">
-      <input type="radio" id="btn-4" name="1">
-      <input type="radio" id="btn-5" name="1">
-      <input type="radio" id="btn-6" name="1">
+      <input type="radio" id="btn-4" name="2" checked>
+      <input type="radio" id="btn-5" name="2">
+      <input type="radio" id="btn-6" name="2">
       <div class="slider-inner">
         <div class="slider-slides">
           <img src="img/product-2.png" alt="" width="220" height="165">
@@ -137,9 +137,9 @@
   <!-- 3 -->
   <div class="catalog-items">
     <div class="slider">
-      <input type="radio" id="btn-7" name="1">
-      <input type="radio" id="btn-8" name="1">
-      <input type="radio" id="btn-9" name="1">
+      <input type="radio" id="btn-7" name="3" checked>
+      <input type="radio" id="btn-8" name="3">
+      <input type="radio" id="btn-9" name="3">
       <div class="slider-inner">
         <div class="slider-slides">
           <img src="img/product-3.png" alt="" width="220" height="165">
@@ -162,9 +162,9 @@
   <!-- 4 -->
   <div class="catalog-items">
     <div class="slider">
-      <input type="radio" id="btn-10" name="1">
-      <input type="radio" id="btn-11" name="1">
-      <input type="radio" id="btn-12" name="1">
+      <input type="radio" id="btn-10" name="4" checked>
+      <input type="radio" id="btn-11" name="4">
+      <input type="radio" id="btn-12" name="4">
       <div class="slider-inner">
         <div class="slider-slides">
           <img src="img/product-4.png" alt="" width="220" height="165">
@@ -187,9 +187,9 @@
 <!-- 5 -->
   <div class="catalog-items">
     <div class="slider">
-      <input type="radio" id="btn-13" name="1">
-      <input type="radio" id="btn-14" name="1">
-      <input type="radio" id="btn-15" name="1">
+      <input type="radio" id="btn-13" name="5" checked>
+      <input type="radio" id="btn-14" name="5">
+      <input type="radio" id="btn-15" name="5">
       <div class="slider-inner">
         <div class="slider-slides">
           <img src="img/product-5.png" alt="" width="220" height="165">
@@ -212,9 +212,9 @@
 <!-- 6 -->
   <div class="catalog-items">
     <div class="slider">
-      <input type="radio" id="btn-16" name="1">
-      <input type="radio" id="btn-17" name="1">
-      <input type="radio" id="btn-18" name="1">
+      <input type="radio" id="btn-16" name="6" checked>
+      <input type="radio" id="btn-17" name="6">
+      <input type="radio" id="btn-18" name="6">
       <div class="slider-inner">
         <div class="slider-slides">
           <img src="img/product-6.png" alt="" width="220" height="165">
@@ -263,6 +263,37 @@
       </div>
     </div>
   </footer>
+  <div class="modal-content">
+    <button class="modal-content-close" type="button" name="button">
+      Закрыть</button>
+      <h2 class="modal-content-title">Личный кабинет</h2>
+      <p>Введите свой логин и пароль</p>
+      <form class="login-form" action="index.html" method="post">
+        <input class="icon-user" type="text" name="login" value="" placeholder="Логин">
+        <input class="icon-password" type="password" name="password" value="" placeholder="Пароль">
+        <label class="login-checkbox">
+        <input type="checkbox" name="remember" value="">
+        <span class="checkbox-indicator"></span> Запомни меня
+        </label>
+        <a class="restore" href="#">Я забыл пароль!</a>
+        <button class="btn"type="submit" name="button">Войти</button>
+      </form>
+  </div>
+  <script>
+    var link = document.querySelector(".login");
+    var popup = document.querySelector(".modal-content");
+    var close = document.querySelector(".modal-content-close");
+
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
+    popup.classList.add("modal-content-show");
+    });
+
+    close.addEventListener("click", function(event) {
+      event.preventDefault();
+    popup.classList.remove("modal-content-show");
+    });
+  </script>
 </body>
 
 </html>
