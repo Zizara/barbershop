@@ -2,7 +2,6 @@ body {
   min-width: 960px;
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
   font-size: 14px;
   line-height: 24px;
   font-weight: 700px;
@@ -173,9 +172,7 @@ body {
 .main-shop-product {
   display: flex;
   margin-bottom: 40px;
-  /* align-items: flex-start; */
-  /* flex-wrap: wrap; */
-}
+  }
 
 /*левая колонка квадраты*/
 
@@ -208,10 +205,12 @@ body {
   border: 2px solid #000000;
   width: 17px;
   height: 17px;
-  top: 13px;
+  top: 23px;
   left: 0;
 }
-
+.checkbox-product:nth-child(n+3) input[type="checkbox"]+.square {
+  top: 13px;
+}
 .checkbox-product input[type="checkbox"]:checked+.square::before, .checkbox-product input[type="checkbox"]:checked+.square::after {
   content: "";
   position: absolute;
@@ -285,10 +284,7 @@ body {
   flex-wrap: wrap;
 }
 
-
-
 .catalog-items {
-
   box-sizing: border-box;
   padding: 15px;
   margin: 15px;
@@ -542,9 +538,6 @@ body {
   background-position: -100px -57px;
 }
 
-/* .footer-copyright {
-  max-width: 184px;
-} */
 .footer-copyright p {
   margin-bottom: 15px;
   text-align: center;
@@ -556,4 +549,131 @@ body {
 .footer-copyright .btn:hover {
   color: #000000;
   background-color: #ffffff;
+}
+
+/*всплывающая форма*/
+.modal-content {
+  position: fixed;
+  display: none;
+  top: 120px;
+  left: 50%;
+  margin-left: -230px;
+  width: 300px;
+  padding: 50px 80px;
+  color: #000000;
+  background: #e5e5e5;
+  box-shadow: 0 0 10px 3px #ebe9e8;
+}
+.modal-content-show {
+  display: block;
+}
+
+.modal-content-close {
+  position: absolute;
+  top:0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.modal-content-close::after,
+.modal-content-close::before {
+  position: absolute;
+  content: "";
+  background-color: #d0d0d0;
+  top:10px;
+  left:0px;
+  width: 22px;
+  height: 3px;
+}
+.modal-content-close::after {
+  transform: rotate(45deg);
+}
+.modal-content-close::before {
+  transform: rotate(-45deg);
+}
+.modal-content-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 42px;
+}
+.modal-content p {
+  margin: 0;
+  margin-bottom: 14px;
+}
+.modal-content .login-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 236px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  text-transform: uppercase;
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+  outline: none;
+}
+.login-form input.icon-user {
+  background-image: url("../img/sprite-form.png");
+  background-repeat: no-repeat;
+  background-position: 260px 50%;
+  }
+.login-form input.icon-password {
+  background-image: url("../img/sprite-form2.png");
+  background-repeat: no-repeat;
+  background-position: 260px 50%;
+  }
+.login-form .restore {
+  float: right;
+  color: #000000;
+}
+.login-form .btn {
+  width: 100%;
+  margin-top: 15px;
+}
+.login-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.login-checkbox input[type="checkbox"] {
+  display: none;
+}
+.login-checkbox input[type="checkbox"]+.checkbox-indicator {
+  position: absolute;
+  border: 2px solid #000000;
+  width: 17px;
+  height: 17px;
+  top: -3px;
+  left: 0;
+}
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+content: "";
+position: absolute;
+width: 15px;
+height: 2px;
+top:8px;
+left:1px;
+background-color: #000000;
+}
+.login-checkbox input[type="checkbox"]+.checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+.login-checkbox input[type="checkbox"]+.checkbox-indicator::after {
+  transform: rotate(-45deg);
 }
