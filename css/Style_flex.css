@@ -41,6 +41,11 @@ body {
   padding-bottom: 22px;
 }
 
+.disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
 /*Список меню*/
 
 .main-shop-navigation {
